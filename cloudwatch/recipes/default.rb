@@ -29,7 +29,6 @@ bash 'CPUUtilization > 90' do
     --dimensions Name=InstanceId,Value=#{aws_instance_id} \
     --statistic Maximum \
     --threshold 90 \
-    --unit Percent \
     --period 300 \
     --evaluation-periods 1 \
     --comparison-operator GreaterThanThreshold \
@@ -49,7 +48,6 @@ bash 'MemoryUtilization > 90' do
     --dimensions Name=InstanceId,Value=#{aws_instance_id} \
     --statistic Maximum \
     --threshold 90 \
-    --unit Percent \
     --period 300 \
     --evaluation-periods 1 \
     --comparison-operator GreaterThanThreshold \
@@ -69,7 +67,6 @@ bash 'DiskSpaceUtilization > 90' do
     --dimensions '[{"Name":"InstanceId","Value":"#{aws_instance_id}"},{"Name":"Filesystem","Value":"/dev/xvda1"},{"Name":"MountPath","Value":"/"}]' \
     --statistic Maximum \
     --threshold 90 \
-    --unit Percent \
     --period 300 \
     --evaluation-periods 1 \
     --comparison-operator GreaterThanThreshold \
