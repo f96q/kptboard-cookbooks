@@ -1,5 +1,11 @@
 DEPENDENCIES
+  cloudwatch_monitoring
+    git: git://github.com/WatershedLRS/cloudwatch_monitoring.git
+    revision: 390acb0d849fdb402725bcf7970c61173e0edb7f
   timezone-ii
 
 GRAPH
+  cloudwatch_monitoring (1.1.1)
+    cron (>= 0.0.0)
+  cron (1.7.3)
   timezone-ii (0.2.0)
