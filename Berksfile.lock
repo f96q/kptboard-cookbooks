@@ -1,5 +1,14 @@
 DEPENDENCIES
+  cloudwatch
+    git: git://github.com/f96q/cloudwatch.git
+    revision: 1808a8450b117d4f85a44c3bac0972a0c5ae3c03
+    branch: customize-threshold
   timezone-ii
 
 GRAPH
+  cloudwatch (0.1.0)
+    cloudwatch_monitoring (>= 0.0.0)
+  cloudwatch_monitoring (1.2.0)
+    cron (>= 0.0.0)
+  cron (1.7.4)
   timezone-ii (0.2.0)
